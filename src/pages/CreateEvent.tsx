@@ -187,7 +187,7 @@ export default function CreateEvent() {
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
                     <Label>Event Date *</Label>
-                    <Popover>
+                    <Popover modal>
                       <PopoverTrigger asChild>
                         <Button
                           variant="outline"
@@ -200,7 +200,7 @@ export default function CreateEvent() {
                           {date ? format(date, "PPP") : <span>Pick a date</span>}
                         </Button>
                       </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0 bg-popover border" align="start">
+                      <PopoverContent className="w-auto p-0 bg-popover border z-50" align="start" side="bottom" sideOffset={4}>
                         <Calendar
                           mode="single"
                           selected={date}
