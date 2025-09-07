@@ -1,73 +1,51 @@
-# Welcome to your Lovable project
+🚀 Campus Event Management  Project
 
-## Project info
+This is a React + TypeScript project built with Vite, styled using Tailwind CSS and shadcn/ui.
 
-**URL**: https://lovable.dev/projects/b359c01a-2e87-441e-8ad5-aa027bc2b15d
+🌐 Live Project
 
-## How can I edit this code?
+👉 Check it out here
 
-There are several ways of editing your application.
+⚙️ Getting Started
 
-**Use Lovable**
+If you want to run this project locally, here’s how:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b359c01a-2e87-441e-8ad5-aa027bc2b15d) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Move into the project folder
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Once it’s running, open your browser and go to:
+http://localhost:5173
+ (or whatever port Vite chooses).
 
-**Use GitHub Codespaces**
+🛠️ Tech Stack
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+React (UI library)
 
-## What technologies are used for this project?
+TypeScript (type safety)
 
-This project is built with:
+Vite (fast dev server & build tool)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Tailwind CSS (utility-first styling)
 
-## How can I deploy this project?
+shadcn/ui (prebuilt, customizable UI components)
 
-Simply open [Lovable](https://lovable.dev/projects/b359c01a-2e87-441e-8ad5-aa027bc2b15d) and click on Share -> Publish.
+🚀 Deployment
 
-## Can I connect a custom domain to my Lovable project?
+The project can be deployed easily with Lovable.
+To publish it, open the project in Lovable and click:
+Share → Publish.
 
-Yes, you can!
+🌍 Custom Domain
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+You can connect your own custom domain in Lovable under:
+Project → Settings → Domains → Connect Domain.
