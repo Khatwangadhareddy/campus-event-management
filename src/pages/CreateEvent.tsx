@@ -198,14 +198,13 @@ export default function CreateEvent() {
                           {date ? format(date, "PPP") : <span>Pick a date</span>}
                         </Button>
                       </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
+                      <PopoverContent className="w-auto p-0 bg-popover border" align="start">
                         <Calendar
                           mode="single"
                           selected={date}
                           onSelect={setDate}
                           disabled={(date) => date < new Date()}
                           initialFocus
-                          className={cn("p-3 pointer-events-auto")}
                         />
                       </PopoverContent>
                     </Popover>

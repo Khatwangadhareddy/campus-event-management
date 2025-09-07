@@ -237,15 +237,30 @@ export default function Events() {
 
               {/* Actions */}
               <div className="flex gap-2 pt-2">
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick={() => console.log(`Viewing event: ${event.id}`)}
+                >
                   <Eye className="mr-1 h-3 w-3" />
                   View
                 </Button>
-                <Button variant="outline" size="sm" className="flex-1">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick={() => console.log(`Editing event: ${event.id}`)}
+                >
                   <Edit className="mr-1 h-3 w-3" />
                   Edit
                 </Button>
-                <Button variant="outline" size="sm" className="px-2">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="px-2"
+                  onClick={() => console.log(`Deleting event: ${event.id}`)}
+                >
                   <Trash2 className="h-3 w-3" />
                 </Button>
               </div>
