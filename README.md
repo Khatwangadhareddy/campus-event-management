@@ -3,8 +3,7 @@
 This is a React + TypeScript project built with Vite, styled using Tailwind CSS and shadcn/ui.
 
 🌐 Live Project
-
-👉 Check it out here
+https://lovable.dev/projects/b359c01a-2e87-441e-8ad5-aa027bc2b15d
 
 ⚙️ Getting Started
 
