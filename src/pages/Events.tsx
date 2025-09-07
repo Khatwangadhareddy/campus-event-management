@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -22,8 +23,11 @@ import {
   Trash2,
   Eye
 } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
 
 export default function Events() {
+  const navigate = useNavigate()
+  const { toast } = useToast()
   const [searchTerm, setSearchTerm] = useState("")
   const [statusFilter, setStatusFilter] = useState("all")
   const [typeFilter, setTypeFilter] = useState("all")
@@ -112,6 +116,35 @@ export default function Events() {
     return "bg-gradient-primary"
   }
 
+  const handleCreateEvent = () => {
+    navigate("/create-event")
+  }
+
+  const handleViewEvent = (eventId: string) => {
+    toast({
+      title: "View Event",
+      description: `Opening details for event ${eventId}`,
+    })
+    // Navigate to event details page when implemented
+  }
+
+  const handleEditEvent = (eventId: string) => {
+    toast({
+      title: "Edit Event",
+      description: `Opening editor for event ${eventId}`,
+    })
+    // Navigate to edit event page when implemented
+  }
+
+  const handleDeleteEvent = (eventId: string) => {
+    toast({
+      title: "Delete Event",
+      description: `Event ${eventId} has been deleted`,
+      variant: "destructive",
+    })
+    // Implement delete functionality when backend is connected
+  }
+
   return (
     <div className="p-6 space-y-6">
       {/* Header */}
@@ -120,7 +153,7 @@ export default function Events() {
           <h1 className="text-3xl font-bold text-foreground">Events</h1>
           <p className="text-muted-foreground">Manage all campus events</p>
         </div>
-        <Button className="bg-gradient-primary hover:opacity-90">
+        <Button className="bg-gradient-primary hover:opacity-90" onClick={handleCreateEvent}>
           <Plus className="mr-2 h-4 w-4" />
           Create Event
         </Button>
@@ -241,7 +274,7 @@ export default function Events() {
                   variant="outline" 
                   size="sm" 
                   className="flex-1"
-                  onClick={() => console.log(`Viewing event: ${event.id}`)}
+                  onClick={() => handleViewEvent(event.id)}
                 >
                   <Eye className="mr-1 h-3 w-3" />
                   View
@@ -250,7 +283,7 @@ export default function Events() {
                   variant="outline" 
                   size="sm" 
                   className="flex-1"
-                  onClick={() => console.log(`Editing event: ${event.id}`)}
+                  onClick={() => handleEditEvent(event.id)}
                 >
                   <Edit className="mr-1 h-3 w-3" />
                   Edit
@@ -259,7 +292,7 @@ export default function Events() {
                   variant="outline" 
                   size="sm" 
                   className="px-2"
-                  onClick={() => console.log(`Deleting event: ${event.id}`)}
+                  onClick={() => handleDeleteEvent(event.id)}
                 >
                   <Trash2 className="h-3 w-3" />
                 </Button>
@@ -277,7 +310,7 @@ export default function Events() {
             <p className="text-muted-foreground text-center mb-4">
               No events match your current filters. Try adjusting your search criteria.
             </p>
-            <Button className="bg-gradient-primary hover:opacity-90">
+            <Button className="bg-gradient-primary hover:opacity-90" onClick={handleCreateEvent}>
               <Plus className="mr-2 h-4 w-4" />
               Create New Event
             </Button>

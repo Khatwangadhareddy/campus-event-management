@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -23,6 +24,7 @@ import { cn } from "@/lib/utils"
 import { useToast } from "@/hooks/use-toast"
 
 export default function CreateEvent() {
+  const navigate = useNavigate()
   const { toast } = useToast()
   const [date, setDate] = useState<Date>()
   const [formData, setFormData] = useState({
@@ -86,7 +88,7 @@ export default function CreateEvent() {
     <div className="p-6 space-y-6 max-w-4xl mx-auto">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" onClick={() => navigate("/events")}>
           <ArrowLeft className="h-4 w-4" />
         </Button>
         <div>
